@@ -95,4 +95,24 @@ public class ProblemTest {
             assertThat(Problem4.solution(number)).isEqualTo(answer);
         }
     }
+
+    @Nested
+    class Problem5Test{
+        @Test
+        void case1(){
+            Integer N = 10;
+            Integer K = 4200;
+            Integer[] values = {1, 5, 10, 50, 100, 500, 1000, 5000, 10000, 50000};
+            Integer answer = 6;
+            assertThat(Problem5.solution(N, K, values)).isEqualTo(answer);
+        }
+        @Test
+        void case2(){
+            Integer N = 10;
+            Integer K = 4790;
+            Integer[] values = {1, 5, 10, 50, 100, 500, 1000, 5000, 10000, 50000};
+            Integer answer = 12;
+            assertThat(Problem5.solution(N, K, values)).isEqualTo(answer);
+        }
+    }
 }
