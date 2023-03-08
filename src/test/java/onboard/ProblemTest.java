@@ -13,23 +13,23 @@ public class ProblemTest {
     class Problem1Test{
         @Test
         void case1(){
-            Long hour = 10L;
-            Long minute = 10L;
-            List<Long> answer = List.of(9L, 25L);
+            Integer hour = 10;
+            Integer minute = 10;
+            List<Integer> answer = List.of(9, 25);
             assertThat(Problem1.solution(hour, minute)).isEqualTo(answer);
         }
         @Test
         void case2(){
-            Long hour = 0L;
-            Long minute = 30L;
-            List<Long> answer = List.of(23L, 45L);
+            Integer hour = 0;
+            Integer minute = 3;
+            List<Integer> answer = List.of(23, 45);
             assertThat(Problem1.solution(hour, minute)).isEqualTo(answer);
         }
         @Test
         void case3(){
-            Long hour = 23L;
-            Long minute = 40L;
-            List<Long> answer = List.of(22L, 55L);
+            Integer hour = 23;
+            Integer minute = 40;
+            List<Integer> answer = List.of(22, 55);
             assertThat(Problem1.solution(hour, minute)).isEqualTo(answer);
         }
     }
