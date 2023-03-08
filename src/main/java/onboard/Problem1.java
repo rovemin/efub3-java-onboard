@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem1 {
-    public static List<Long> solution(Long hour, Long minute){
-        List<Long> answer = new ArrayList<>();
-
+    public static List<Integer> solution(Integer hour, Integer minute){
+        List<Integer> answer = new ArrayList<>();
         return answer;
     }
 }
