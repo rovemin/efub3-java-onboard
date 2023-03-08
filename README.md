@@ -9,3 +9,6 @@
 |3|대표값2|[링크](https://www.acmicpc.net/problem/2587)|
 |4|소트인사이드|[링크](https://www.acmicpc.net/problem/1427)|
 |5|동전 0|[링크](https://www.acmicpc.net/problem/11047)|
+
+## 2. 자바 개념 정리
+답변해야 하는 질문: [바로가기](https://github.com/sunnyineverywhere/efub3-java-onboard/blob/main/docs/JAVA_QUESTION.md)
