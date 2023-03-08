@@ -6,7 +6,7 @@ import java.util.List;
 public class Problem1 {
     public static List<Long> solution(Long hour, Long minute){
         List<Long> answer = new ArrayList<>();
-        answer.add(1);
+        answer.add(1L);
         return answer;
     }
 }
