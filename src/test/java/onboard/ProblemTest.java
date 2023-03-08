@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -57,4 +58,41 @@ public class ProblemTest {
         }
     }
 
+    @Nested
+    class Problem3Test{
+        @Test
+        void case1(){
+            List<Integer> numbers = new ArrayList<>(Arrays.asList(10, 40, 30, 60, 30));
+            List<Integer> answer = new ArrayList<>(Arrays.asList(34, 40));
+            assertThat(Problem3.solution(numbers)).isEqualTo(answer);
+        }
+    }
+
+    @Nested
+    class Problem4Test{
+        @Test
+        void case1(){
+            Integer number = 2143;
+            Integer answer = 4321;
+            assertThat(Problem4.solution(number)).isEqualTo(answer);
+        }
+        @Test
+        void case2(){
+            Integer number = 999998999;
+            Integer answer = 999999998;
+            assertThat(Problem4.solution(number)).isEqualTo(answer);
+        }
+        @Test
+        void case3(){
+            Integer number = 61423;
+            Integer answer = 64321;
+            assertThat(Problem4.solution(number)).isEqualTo(answer);
+        }
+        @Test
+        void case4(){
+            Integer number = 500613009;
+            Integer answer = 965310000;
+            assertThat(Problem4.solution(number)).isEqualTo(answer);
+        }
+    }
 }
