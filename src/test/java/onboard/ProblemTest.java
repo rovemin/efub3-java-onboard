@@ -23,7 +23,7 @@ public class ProblemTest {
         @Test
         void case2(){
             Integer hour = 0;
-            Integer minute = 3;
+            Integer minute = 30;
             List<Integer> answer = List.of(23, 45);
             assertThat(Problem1.solution(hour, minute)).isEqualTo(answer);
         }
@@ -43,6 +43,7 @@ public class ProblemTest {
         void case1(){
             List<Integer[]> flipCards = new ArrayList<>();
             // TODO: 아래 삽입 과정 깔끔하게 하는 방법 고려
+            Integer[][] cads = {{5, 10}, {9, 13}, {1, 2}, {3, 4}, {5, 6}, {1, 2}, {3, 4}, {5, 6}, {1, 20}, {1, 20}}
             flipCards.add(new Integer[]{5, 10});
             flipCards.add(new Integer[]{9, 13});
             flipCards.add(new Integer[]{1, 2});
@@ -63,7 +64,7 @@ public class ProblemTest {
         @Test
         void case1(){
             List<Integer> numbers = new ArrayList<>(Arrays.asList(10, 40, 30, 60, 30));
-            List<Integer> answer = new ArrayList<>(Arrays.asList(34, 40));
+            List<Integer> answer = new ArrayList<>(Arrays.asList(34, 30));
             assertThat(Problem3.solution(numbers)).isEqualTo(answer);
         }
     }
