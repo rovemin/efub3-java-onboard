@@ -1,12 +1,29 @@
 package onboard;
 
-/**
- * 리턴값 answer의 경우, 변수 초기값은 변경 가능합니다.
- * 다만 answer로 return하는 것은 변경하지 않도록 주의해주세요.
- */
+import java.util.Arrays;
+import java.util.Collections;
+
 public class Problem4 {
     public static Integer solution(Integer number){
         Integer answer = 0;
+
+        String num = Integer.toString(number);
+
+        String[] arr = new String[num.length()];
+
+        for (int i=0; i<num.length(); i++) {
+            arr[i] = String.valueOf(num.charAt(i));
+        }
+
+        Arrays.sort(arr, Collections.reverseOrder());
+
+        String joinArr = "";
+        for (int i=0; i<num.length(); i++) {
+            joinArr = String.join("", joinArr, arr[i]);
+        }
+
+        answer = Integer.parseInt(joinArr);
+
         return answer;
     }
 }
