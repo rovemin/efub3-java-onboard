@@ -17,7 +17,7 @@ public class Problem2 {
             int a = arr[0];
             int b = arr[1];
 
-            for (int j=a; j<b-a+1; j++) {
+            for (int j=a; j<b-a+1; j++) {   // 입력으로 주어진 구간 순서대로 뒤집기
                 for (int k=b; k>=j; k--)
                 answer[j-1] = answer[k-1];
             }
