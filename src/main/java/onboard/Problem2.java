@@ -1,25 +1,31 @@
 package onboard;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Problem2 {
     public static Integer[] solution(Integer[][] flipCards){
-        Integer[] answer = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+        Integer[] answer = new Integer[20];
 
         for (int i=0; i<20; i++) {
-            answer[i] = i;
+            answer[i] = i + 1;
         }
 
         for (int i=0; i<flipCards.length; i++) {
-            Integer[] arr = flipCards[i];
+            int start = flipCards[i][0] - 1;
+            int end = flipCards[i][1] - 1;
 
-            int a = arr[0];
-            int b = arr[1];
+            int len = end - start + 1;
 
-            for (int j=a; j<b-a+1; j++) {   // 입력으로 주어진 구간 순서대로 뒤집기
-                for (int k=b; k>=j; k--)
-                answer[j-1] = answer[k-1];
+            Integer[] copy = new Integer[len];
+
+            for (int j=0; j<len; j++) {
+                copy[j] = answer[start + j];
+            }
+
+            for (int k=0; k<len; k++) {     // start번 인덱스부터 end번 인덱스까지 역순 정렬
+                answer[start + k] = copy[len - (k + 1)];
             }
         }
 
